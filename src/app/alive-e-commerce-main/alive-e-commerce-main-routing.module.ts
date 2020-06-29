@@ -75,7 +75,7 @@ const routes: Routes = [{
     },
     {
       path: '',
-      redirectTo: 'dashboard',
+      redirectTo: 'alive-upload-product-main',
       pathMatch: 'full',
     },
     {

@@ -1,9 +1,10 @@
 <nb-card>
   <nb-card-body>
-    <nb-stepper orientation="horizontal" disableStepNavigation>
-      <nb-step [label]="labelOne">
-        <ng-template #labelOne>Basic Details</ng-template>
-        <form>
+    <form>
+      <nb-stepper orientation="horizontal" disableStepNavigation>
+        <nb-step [label]="labelOne">
+          <ng-template #labelOne>Basic Details</ng-template>
+
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
@@ -49,10 +50,57 @@
 
             </div>
             <div class="col-md-6">
+              <div class="form-group">
+
+                <input type="number" shape="round" nbInput fullWidth id="exampleInputOGC1"
+                  placeholder="Enter Original Cost">
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <input type="number" nbInput shape="round" fullWidth id="exampleInputQuantity"
+                  placeholder="Enter Quantity, Product Available With">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <input type="number" shape="round" nbInput fullWidth id="exampleInputDCC1"
+                  placeholder="Enter Discounted Cost">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <input #autoInput nbInput shape="round" fullWidth type="text" (input)="onChange()"
+                  placeholder="Select Brand Name" [nbAutocomplete]="auto" />
+                <nb-autocomplete #auto (selectedChange)="onSelectionChange($event)">
+
+                  <nb-option *ngFor="let option of filteredOptions$ | async" [value]="option">
+                    {{ option }}
+                  </nb-option>
+
+                </nb-autocomplete>
+              </div>
+            </div>
+            <div class="col-md-6">
 
               <div class="form-group">
                 <nb-select shape="round" fullWidth multiple id="exampleInputColors"
                   placeholder="Select Colors Available for the Product">
+
+                  <nb-option value="0">Option 0</nb-option>
+                  <nb-option value="1">Option 1</nb-option>
+                  <nb-option value="2">Option 2</nb-option>
+                  <nb-option value="3">Option 3</nb-option>
+                  <nb-option value="4">Option 4</nb-option>
+                </nb-select>
+              </div>
+            </div>
+            <div class="col-md-6">
+
+              <div class="form-group">
+                <nb-select shape="round" fullWidth multiple id="exampleInputSecColors"
+                  placeholder="Select Secondary Colors Available for the Product">
 
                   <nb-option value="0">Option 0</nb-option>
                   <nb-option value="1">Option 1</nb-option>
@@ -75,95 +123,78 @@
                 </nb-select>
               </div>
             </div>
-          </div>
 
-        </form>
-        <button nbButton disabled nbStepperNext>prev</button>
-        <button nbButton nbStepperNext>next</button>
-      </nb-step>
-      <nb-step [label]="labelTwo">
-        <ng-template #labelTwo>Price and Cost</ng-template>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="form-group">
+            <div class="col-md-6">
+              <div class="form-group">
+                <nb-select fullWidth shape="round" multiple id="exampleInputPayment"
+                  placeholder="Select Payment Type for the Product">
 
-              <input type="number" shape="round" nbInput fullWidth id="exampleInputOGC1"
-                placeholder="Enter Original Cost">
+                  <nb-option value="0">Any</nb-option>
+                  <nb-option value="1">COD</nb-option>
+                  <nb-option value="2">Credit/Debit Card</nb-option>
+                  <nb-option value="3">Net Banking</nb-option>
+                  <nb-option value="4">Mobile Walet</nb-option>
+                </nb-select>
+              </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <input type="number" shape="round" nbInput fullWidth id="exampleInputDCC1"
-                placeholder="Enter Discounted Cost">
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <nb-select fullWidth shape="round" multiple id="exampleInputPayment"
-                placeholder="Select Payment Type for the Product">
+            <div class="col-md-6">
+              <div class="form-group">
+                <nb-select fullWidth shape="round" multiple id="exampleInputCC"
+                  placeholder="Select Particular Coupon Code for this Product (Ignore if all coupon code can be applied)">
 
-                <nb-option value="0">Any</nb-option>
-                <nb-option value="1">COD</nb-option>
-                <nb-option value="2">Credit/Debit Card</nb-option>
-                <nb-option value="3">Net Banking</nb-option>
-                <nb-option value="4">Mobile Walet</nb-option>
-              </nb-select>
+                  <nb-option value="1">None</nb-option>
+                  <nb-option value="2">Coupn Code List</nb-option>
+                </nb-select>
+              </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <nb-select fullWidth shape="round" multiple id="exampleInputCC"
-                placeholder="Select Particular Coupon Code for this Product (Ignore if all coupon code can be applied)">
+            <div class="col-md-6">
+              <div class="form-group">
+                <nb-select fullWidth shape="round" id="exampleInputDelivery"
+                  placeholder="Want To Apply Delivery Charge For This Product?">
 
-                <nb-option value="1">None</nb-option>
-                <nb-option value="2">Coupn Code List</nb-option>
-              </nb-select>
+                  <nb-option value="1">Yes</nb-option>
+                  <nb-option value="2">No</nb-option>
+                </nb-select>
+              </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <nb-select fullWidth shape="round" id="exampleInputDelivery"
-                placeholder="You Want To Apply Delivery Charge For This Product?">
 
-                <nb-option value="1">Yes</nb-option>
-                <nb-option value="2">No</nb-option>
-              </nb-select>
-            </div>
           </div>
-          <div class="col-md-6">
-            <div class="form-group">
-              <input type="number" nbInput shape="round" fullWidth id="exampleInputQuantity"
-                placeholder="Enter Quantity, Product Available With">
+          <button nbButton hero status="info" nbStepperPrevious>prev</button>
+          <button nbButton hero status="info" nbStepperNext>next</button>
+        </nb-step>
+        <nb-step label="Images">
+
+          <div class="row">
+            <div class="col-md-5">
+              <input type="tel" maxlength="1" [(ngModel)]="imagesText" name="exampleInputQuantity" shape="round" nbInput
+                fullWidth id="exampleInputQuantity"
+                placeholder="Enter The Number of Images You Want To Upload Between 1 to 9">
+
+
+            </div>
+            <div class="col-md-1">
+              <button nbButton (click)="imagesDisplay(imagesText)">Enter</button>
+            </div>
+            <div class="col-md-6">
+              <div *ngFor="let i of imagesCounterArray">
+                <input type="file" fullWidth nbInput id="exampleInputFiles{{i}}">
+              </div>
             </div>
           </div>
 
-        </div>
-        <button nbButton nbStepperPrevious>prev</button>
-        <button nbButton nbStepperNext>next</button>
-      </nb-step>
-      <nb-step label="Images">
+          <button nbButton hero status="info" nbStepperPrevious>prev</button>
+          <button nbButton hero status="info" nbStepperNext>Save and Proceed</button>
 
-        <div class="row">
-          <div class="col-md-5">
-            <input type="tel" maxlength="1" [(ngModel)]="imagesText" shape="round" nbInput fullWidth
-              id="exampleInputQuantity" placeholder="Enter The Number of Images You Want To Upload Between 1 to 9">
+        </nb-step>
+        <nb-step label="Finish">
+          <h4>Make Sure All The Entered Data Are Correct And Than Click Upload Your Product</h4>
+          <button status hero status="info" nbButton nbStepperPrevious>prev</button>
+          <button nbButton status="info" hero disabled nbStepperNext>
+            <nb-icon icon="star"></nb-icon>Upload Your Product
+          </button>
+        </nb-step>
 
-
-          </div>
-          <div class="col-md-1">
-            <button nbButton shape="round" size="small" (click)="imagesDisplay(imagesText)">Enter</button>
-          </div>
-          <div class="col-md-6">
-            <div *ngFor="let i of imagesCounterArray">
-              <input type="file" fullWidth nbInput id="exampleInputFiles{{i}}">
-            </div>
-          </div>
-        </div>
-        <button nbButton nbStepperPrevious>prev</button>
-        <button nbButton disabled nbStepperNext>Upload Your Product</button>
-
-      </nb-step>
-
-    </nb-stepper>
+      </nb-stepper>
+    </form>
   </nb-card-body>
 </nb-card>

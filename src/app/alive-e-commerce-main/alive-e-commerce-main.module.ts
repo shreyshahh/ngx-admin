@@ -17,8 +17,7 @@ import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
     ECommerceModule,
     MiscellaneousModule,
   ],
-  declarations: [
-    AliveECommerceMainComponent],
+  declarations: [AliveECommerceMainComponent],
 })
 export class AliveECommerceMainModule {
 }
