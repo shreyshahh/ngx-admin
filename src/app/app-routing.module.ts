@@ -11,9 +11,9 @@ import {
 
 export const routes: Routes = [
   {
-    path: 'pages',
-    loadChildren: () => import('./pages/pages.module')
-      .then(m => m.PagesModule),
+    path: 'alive-e-commerce-main',
+    loadChildren: () => import('./alive-e-commerce-main/alive-e-commerce-main.module')
+      .then(m => m.AliveECommerceMainModule),
   },
   {
     path: 'auth',
@@ -45,8 +45,8 @@ export const routes: Routes = [
       },
     ],
   },
-  { path: '', redirectTo: 'pages', pathMatch: 'full' },
-  { path: '**', redirectTo: 'pages' },
+  { path: '', redirectTo: 'alive-e-commerce-main', pathMatch: 'full' },
+  { path: '**', redirectTo: 'alive-e-commerce-main' },
 ];
 
 const config: ExtraOptions = {

@@ -1,15 +1,20 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
-import { PagesComponent } from './pages.component';
+import { AliveECommerceMainComponent } from './alive-e-commerce-main.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ECommerceComponent } from './e-commerce/e-commerce.component';
 import { NotFoundComponent } from './miscellaneous/not-found/not-found.component';
+import { AliveUploadProductMainComponent } from './alive-upload-product-main/alive-upload-product-main.component';
 
 const routes: Routes = [{
   path: '',
-  component: PagesComponent,
+  component: AliveECommerceMainComponent,
   children: [
+    {
+      path:'alive-upload-product-main',
+      component: AliveUploadProductMainComponent
+    },
     {
       path: 'dashboard',
       component: ECommerceComponent,
@@ -84,5 +89,5 @@ const routes: Routes = [{
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class PagesRoutingModule {
+export class AliveECommerceMainRoutingModule {
 }

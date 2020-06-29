@@ -2,15 +2,30 @@ import { NbMenuItem } from '@nebular/theme';
 
 export const MENU_ITEMS: NbMenuItem[] = [
   {
+    title: 'Products',
+    icon: 'shopping-cart',
+    children: [
+      {
+        title: 'Upload Product',
+        icon: 'upload',
+        link: '/alive-e-commerce-main/alive-upload-product-main'
+      },
+      {
+        title: 'View/Edit Products',
+        icon: 'edit-2'
+      },
+    ],
+  },
+  {
     title: 'E-commerce',
     icon: 'shopping-cart-outline',
-    link: '/pages/dashboard',
+    link: '/alive-e-commerce-main/dashboard',
     home: true,
   },
   {
     title: 'IoT Dashboard',
     icon: 'home-outline',
-    link: '/pages/iot-dashboard',
+    link: '/alive-e-commerce-main/iot-dashboard',
   },
   {
     title: 'FEATURES',
@@ -22,24 +37,24 @@ export const MENU_ITEMS: NbMenuItem[] = [
     children: [
       {
         title: 'Stepper',
-        link: '/pages/layout/stepper',
+        link: '/alive-e-commerce-main/layout/stepper',
       },
       {
         title: 'List',
-        link: '/pages/layout/list',
+        link: '/alive-e-commerce-main/layout/list',
       },
       {
         title: 'Infinite List',
-        link: '/pages/layout/infinite-list',
+        link: '/alive-e-commerce-main/layout/infinite-list',
       },
       {
         title: 'Accordion',
-        link: '/pages/layout/accordion',
+        link: '/alive-e-commerce-main/layout/accordion',
       },
       {
         title: 'Tabs',
         pathMatch: 'prefix',
-        link: '/pages/layout/tabs',
+        link: '/alive-e-commerce-main/layout/tabs',
       },
     ],
   },
@@ -49,42 +64,42 @@ export const MENU_ITEMS: NbMenuItem[] = [
     children: [
       {
         title: 'Form Inputs',
-        link: '/pages/forms/inputs',
+        link: '/alive-e-commerce-main/forms/inputs',
       },
       {
         title: 'Form Layouts',
-        link: '/pages/forms/layouts',
+        link: '/alive-e-commerce-main/forms/layouts',
       },
       {
         title: 'Buttons',
-        link: '/pages/forms/buttons',
+        link: '/alive-e-commerce-main/forms/buttons',
       },
       {
         title: 'Datepicker',
-        link: '/pages/forms/datepicker',
+        link: '/alive-e-commerce-main/forms/datepicker',
       },
     ],
   },
   {
     title: 'UI Features',
     icon: 'keypad-outline',
-    link: '/pages/ui-features',
+    link: '/alive-e-commerce-main/ui-features',
     children: [
       {
         title: 'Grid',
-        link: '/pages/ui-features/grid',
+        link: '/alive-e-commerce-main/ui-features/grid',
       },
       {
         title: 'Icons',
-        link: '/pages/ui-features/icons',
+        link: '/alive-e-commerce-main/ui-features/icons',
       },
       {
         title: 'Typography',
-        link: '/pages/ui-features/typography',
+        link: '/alive-e-commerce-main/ui-features/typography',
       },
       {
         title: 'Animated Searches',
-        link: '/pages/ui-features/search-fields',
+        link: '/alive-e-commerce-main/ui-features/search-fields',
       },
     ],
   },
@@ -94,23 +109,23 @@ export const MENU_ITEMS: NbMenuItem[] = [
     children: [
       {
         title: 'Dialog',
-        link: '/pages/modal-overlays/dialog',
+        link: '/alive-e-commerce-main/modal-overlays/dialog',
       },
       {
         title: 'Window',
-        link: '/pages/modal-overlays/window',
+        link: '/alive-e-commerce-main/modal-overlays/window',
       },
       {
         title: 'Popover',
-        link: '/pages/modal-overlays/popover',
+        link: '/alive-e-commerce-main/modal-overlays/popover',
       },
       {
         title: 'Toastr',
-        link: '/pages/modal-overlays/toastr',
+        link: '/alive-e-commerce-main/modal-overlays/toastr',
       },
       {
         title: 'Tooltip',
-        link: '/pages/modal-overlays/tooltip',
+        link: '/alive-e-commerce-main/modal-overlays/tooltip',
       },
     ],
   },
@@ -120,27 +135,27 @@ export const MENU_ITEMS: NbMenuItem[] = [
     children: [
       {
         title: 'Calendar',
-        link: '/pages/extra-components/calendar',
+        link: '/alive-e-commerce-main/extra-components/calendar',
       },
       {
         title: 'Progress Bar',
-        link: '/pages/extra-components/progress-bar',
+        link: '/alive-e-commerce-main/extra-components/progress-bar',
       },
       {
         title: 'Spinner',
-        link: '/pages/extra-components/spinner',
+        link: '/alive-e-commerce-main/extra-components/spinner',
       },
       {
         title: 'Alert',
-        link: '/pages/extra-components/alert',
+        link: '/alive-e-commerce-main/extra-components/alert',
       },
       {
         title: 'Calendar Kit',
-        link: '/pages/extra-components/calendar-kit',
+        link: '/alive-e-commerce-main/extra-components/calendar-kit',
       },
       {
         title: 'Chat',
-        link: '/pages/extra-components/chat',
+        link: '/alive-e-commerce-main/extra-components/chat',
       },
     ],
   },
@@ -150,19 +165,19 @@ export const MENU_ITEMS: NbMenuItem[] = [
     children: [
       {
         title: 'Google Maps',
-        link: '/pages/maps/gmaps',
+        link: '/alive-e-commerce-main/maps/gmaps',
       },
       {
         title: 'Leaflet Maps',
-        link: '/pages/maps/leaflet',
+        link: '/alive-e-commerce-main/maps/leaflet',
       },
       {
         title: 'Bubble Maps',
-        link: '/pages/maps/bubble',
+        link: '/alive-e-commerce-main/maps/bubble',
       },
       {
         title: 'Search Maps',
-        link: '/pages/maps/searchmap',
+        link: '/alive-e-commerce-main/maps/searchmap',
       },
     ],
   },
@@ -172,15 +187,15 @@ export const MENU_ITEMS: NbMenuItem[] = [
     children: [
       {
         title: 'Echarts',
-        link: '/pages/charts/echarts',
+        link: '/alive-e-commerce-main/charts/echarts',
       },
       {
         title: 'Charts.js',
-        link: '/pages/charts/chartjs',
+        link: '/alive-e-commerce-main/charts/chartjs',
       },
       {
         title: 'D3',
-        link: '/pages/charts/d3',
+        link: '/alive-e-commerce-main/charts/d3',
       },
     ],
   },
@@ -190,11 +205,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
     children: [
       {
         title: 'TinyMCE',
-        link: '/pages/editors/tinymce',
+        link: '/alive-e-commerce-main/editors/tinymce',
       },
       {
         title: 'CKEditor',
-        link: '/pages/editors/ckeditor',
+        link: '/alive-e-commerce-main/editors/ckeditor',
       },
     ],
   },
@@ -204,11 +219,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
     children: [
       {
         title: 'Smart Table',
-        link: '/pages/tables/smart-table',
+        link: '/alive-e-commerce-main/tables/smart-table',
       },
       {
         title: 'Tree Grid',
-        link: '/pages/tables/tree-grid',
+        link: '/alive-e-commerce-main/tables/tree-grid',
       },
     ],
   },
@@ -218,7 +233,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     children: [
       {
         title: '404',
-        link: '/pages/miscellaneous/404',
+        link: '/alive-e-commerce-main/miscellaneous/404',
       },
     ],
   },

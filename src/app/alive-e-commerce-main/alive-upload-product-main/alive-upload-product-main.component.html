@@ -1,0 +1,138 @@
+<nb-card>
+  <nb-card-body>
+    <nb-stepper orientation="horizontal" disableStepNavigation>
+      <nb-step [label]="labelOne">
+        <ng-template #labelOne>Basic Details</ng-template>
+        <form>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+
+                <input type="text" nbInput fullWidth id="exampleInputName1" placeholder="Enter Product Title">
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <input #autoInput nbInput fullWidth type="text" (input)="onChange()" placeholder="Select Frame Category"
+                  [nbAutocomplete]="auto" />
+                <nb-autocomplete #auto (selectedChange)="onSelectionChange($event)">
+
+                  <nb-option *ngFor="let option of filteredOptions$ | async" [value]="option">
+                    {{ option }}
+                  </nb-option>
+
+                </nb-autocomplete>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <textarea nbInput rows="1" fullWidth id="exampleInputDescription1"
+                  placeholder="Product Description"></textarea>
+              </div>
+
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <input #autoInput nbInput fullWidth type="text" (input)="onChange()"
+                  placeholder="Select Another Category" [nbAutocomplete]="auto" />
+                <nb-autocomplete #auto (selectedChange)="onSelectionChange($event)">
+
+                  <nb-option *ngFor="let option of filteredOptions$ | async" [value]="option">
+                    {{ option }}
+                  </nb-option>
+
+                </nb-autocomplete>
+              </div>
+
+            </div>
+            <div class="col-md-6">
+
+              <div class="form-group">
+                <nb-select fullWidth multiple id="exampleInputColors"
+                  placeholder="Select Colors Available for the Product">
+
+                  <nb-option value="0">Option 0</nb-option>
+                  <nb-option value="1">Option 1</nb-option>
+                  <nb-option value="2">Option 2</nb-option>
+                  <nb-option value="3">Option 3</nb-option>
+                  <nb-option value="4">Option 4</nb-option>
+                </nb-select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <nb-select fullWidth id="exampleInputGender" placeholder="Select Gender Category for the Product">
+
+                  <nb-option value="0">All</nb-option>
+                  <nb-option value="1">Male</nb-option>
+                  <nb-option value="2">Female</nb-option>
+                  <nb-option value="3">Kids</nb-option>
+                  <nb-option value="4">Unisex</nb-option>
+                </nb-select>
+              </div>
+            </div>
+          </div>
+
+        </form>
+        <button nbButton disabled nbStepperNext>prev</button>
+        <button nbButton nbStepperNext>next</button>
+      </nb-step>
+      <nb-step [label]="labelTwo">
+        <ng-template #labelTwo>Price and Cost</ng-template>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+
+              <input type="number" nbInput fullWidth id="exampleInputOGC1" placeholder="Enter Original Cost">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="number" nbInput fullWidth id="exampleInputDCC1" placeholder="Enter Discounted Cost">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <nb-select fullWidth multiple id="exampleInputPayment" placeholder="Select Payment Type for the Product">
+
+                <nb-option value="0">Any</nb-option>
+                <nb-option value="1">COD</nb-option>
+                <nb-option value="2">Credit/Debit Card</nb-option>
+                <nb-option value="3">Net Banking</nb-option>
+                <nb-option value="4">Mobile Walet</nb-option>
+              </nb-select>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <nb-select fullWidth multiple id="exampleInputCC" placeholder="Select Particular Coupon Code for this Product">
+
+                <nb-option value="0">All</nb-option>
+                <nb-option value="1">None</nb-option>
+                <nb-option value="2">Coupn Code List</nb-option>
+              </nb-select>
+            </div>
+          </div>
+        
+        </div>
+        <button nbButton nbStepperPrevious>prev</button>
+        <button nbButton nbStepperNext>next</button>
+      </nb-step>
+      <nb-step label="Images">
+        <h4>Select Images For this Product</h4>
+        <div class="center">
+          <button nbButton nbStepperPrevious>prev</button>
+          <button nbButton nbStepperNext>next</button>
+        </div>
+      </nb-step>
+      <nb-step [label]="labelFour">
+        <ng-template #labelFour>Other Details</ng-template>
+        <h4>Enter Other Details</h4>
+        <button nbButton nbStepperPrevious>prev</button>
+        <button nbButton disabled nbStepperNext>Submit</button>
+      </nb-step>
+    </nb-stepper>
+  </nb-card-body>
+</nb-card>
