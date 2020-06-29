@@ -12,8 +12,8 @@ const routes: Routes = [{
   component: AliveECommerceMainComponent,
   children: [
     {
-      path:'alive-upload-product-main',
-      component: AliveUploadProductMainComponent
+      path: 'alive-upload-product-main',
+      component: AliveUploadProductMainComponent,
     },
     {
       path: 'dashboard',

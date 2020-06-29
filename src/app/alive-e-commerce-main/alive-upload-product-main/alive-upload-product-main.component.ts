@@ -1,15 +1,15 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Validators } from '@angular/forms';
+// import { Validators } from '@angular/forms';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'ngx-alive-upload-product-main',
   templateUrl: './alive-upload-product-main.component.html',
-  styleUrls: ['./alive-upload-product-main.component.scss']
+  styleUrls: ['./alive-upload-product-main.component.scss'],
 })
 export class AliveUploadProductMainComponent implements OnInit {
-  
+
   options: string[];
   filteredOptions$: Observable<string[]>;
   @ViewChild('autoInput') input;
@@ -18,7 +18,7 @@ export class AliveUploadProductMainComponent implements OnInit {
   ngOnInit(): void {
     this.options = ['Option 1', 'Option 2', 'Option 3'];
     this.filteredOptions$ = of(this.options);
-  
+
 }
 private filter(value: string): string[] {
   const filterValue = value.toLowerCase();

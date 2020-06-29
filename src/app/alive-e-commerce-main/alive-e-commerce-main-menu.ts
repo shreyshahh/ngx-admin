@@ -8,11 +8,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'Upload Product',
         icon: 'upload',
-        link: '/alive-e-commerce-main/alive-upload-product-main'
+        link: '/alive-e-commerce-main/alive-upload-product-main',
       },
       {
         title: 'View/Edit Products',
-        icon: 'edit-2'
+        icon: 'edit-2',
       },
     ],
   },
