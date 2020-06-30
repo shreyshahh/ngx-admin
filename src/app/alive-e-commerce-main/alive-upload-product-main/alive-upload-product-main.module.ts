@@ -7,7 +7,7 @@ import {
   NbCardModule, NbButtonModule, NbListModule, NbAccordionModule,
   NbUserModule, NbInputModule, NbActionsModule, NbCheckboxModule,
   NbRadioModule, NbDatepickerModule,
-  NbSelectModule, NbIconModule, NbAutocompleteModule
+  NbSelectModule, NbIconModule, NbAutocompleteModule,
 } from '@nebular/theme';
 import { LayoutRoutingModule } from '../layout/layout-routing.module';
 import { AliveUploadProductMainComponent } from './alive-upload-product-main.component';
