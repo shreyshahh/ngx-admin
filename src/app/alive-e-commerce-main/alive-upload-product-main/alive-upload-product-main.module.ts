@@ -9,9 +9,7 @@ import {
   NbRadioModule, NbDatepickerModule,
   NbSelectModule, NbIconModule, NbAutocompleteModule,
 } from '@nebular/theme';
-import { LayoutRoutingModule } from '../layout/layout-routing.module';
 import { AliveUploadProductMainComponent } from './alive-upload-product-main.component';
-import { FormsRoutingModule } from '../forms/forms-routing.module';
 
 
 
@@ -30,13 +28,11 @@ import { FormsRoutingModule } from '../forms/forms-routing.module';
     NbListModule,
     NbAccordionModule,
     NbUserModule,
-    LayoutRoutingModule,
     NbInputModule,
     NbActionsModule,
     NbCheckboxModule,
     NbRadioModule,
     NbDatepickerModule,
-    FormsRoutingModule,
     NbSelectModule,
     NbIconModule,
     NbAutocompleteModule,
