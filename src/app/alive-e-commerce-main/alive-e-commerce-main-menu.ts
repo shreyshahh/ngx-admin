@@ -19,6 +19,18 @@ export const MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'Orders',
     icon: 'gift',
+    children: [
+      {
+        title: 'Pending Orders',
+        icon: 'clock',
+        link: '/alive-e-commerce-main/alive-product-orders-main',
+      },
+      {
+        title: 'Delivered Order',
+        icon: 'car',
+        link: '/alive-e-commerce-main/alive-delivered-products-main',
+      },
+    ],
   },
   {
     title: 'Customer Details',
