@@ -47,24 +47,29 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'Frame Category',
         icon: 'recording',
+        link: '/alive-e-commerce-main/alive-frame-category-main',
       },
       {
         title: 'Frame Shape Categories',
         icon: 'recording',
+        link: '/alive-e-commerce-main/alive-frame-shape-category-main',
       },
       {
         title: 'Glass Categories',
         icon: 'recording',
+        link: '/alive-e-commerce-main/alive-glass-category-main',
       },
       {
         title: 'Frame Material',
         icon: 'recording',
+        link: '/alive-e-commerce-main/alive-frame-material-main',
       },
     ],
   },
   {
     title: 'Manage Coupon Codes',
     icon: 'pricetags',
+    link: '/alive-e-commerce-main/alive-coupon-code-main',
   },
   {
     title: 'Manage Payment Methods',

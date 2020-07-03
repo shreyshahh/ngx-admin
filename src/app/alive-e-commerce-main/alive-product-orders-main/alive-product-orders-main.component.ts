@@ -58,7 +58,7 @@ export class AliveProductOrdersMainComponent implements OnInit {
       DeliveryStatus: {
         title: 'Delivery Status',
         type: 'custom',
-        filter: 'false',
+        filter: false,
         renderComponent: DeliveryStatusButtonComponent,
       },
     },
