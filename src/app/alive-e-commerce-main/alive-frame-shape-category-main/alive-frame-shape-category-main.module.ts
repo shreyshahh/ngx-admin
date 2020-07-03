@@ -17,6 +17,6 @@ import { AliveFrameShapeCategoryMainComponent } from './alive-frame-shape-catego
     NbInputModule,
     ThemeModule,
     NbButtonModule,
-  ]
+  ],
 })
 export class AliveFrameShapeCategoryMainModule { }

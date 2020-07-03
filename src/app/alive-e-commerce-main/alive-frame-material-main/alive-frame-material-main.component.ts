@@ -4,7 +4,7 @@ import { LocalDataSource } from 'ng2-smart-table';
 @Component({
   selector: 'ngx-alive-frame-material-main',
   templateUrl: './alive-frame-material-main.component.html',
-  styleUrls: ['./alive-frame-material-main.component.scss']
+  styleUrls: ['./alive-frame-material-main.component.scss'],
 })
 export class AliveFrameMaterialMainComponent implements OnInit {
   ngOnInit(): void {

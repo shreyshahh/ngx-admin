@@ -4,7 +4,7 @@ import { LocalDataSource } from 'ng2-smart-table';
 @Component({
   selector: 'ngx-alive-frame-shape-category-main',
   templateUrl: './alive-frame-shape-category-main.component.html',
-  styleUrls: ['./alive-frame-shape-category-main.component.scss']
+  styleUrls: ['./alive-frame-shape-category-main.component.scss'],
 })
 export class AliveFrameShapeCategoryMainComponent implements OnInit {
 
@@ -55,7 +55,7 @@ export class AliveFrameShapeCategoryMainComponent implements OnInit {
       {
         id: 3,
         product: 'WayFarers',
-      }
+      },
     ];
     this.source.load(data);
   }

@@ -17,6 +17,6 @@ import { AliveGlassCategoryMainComponent } from './alive-glass-category-main.com
     NbInputModule,
     ThemeModule,
     NbButtonModule,
-  ]
+  ],
 })
 export class AliveGlassCategoryMainModule { }

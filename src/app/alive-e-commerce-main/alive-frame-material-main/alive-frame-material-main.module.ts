@@ -17,6 +17,6 @@ import { AliveFrameMaterialMainComponent } from './alive-frame-material-main.com
     NbInputModule,
     ThemeModule,
     NbButtonModule,
-  ]
+  ],
 })
 export class AliveFrameMaterialMainModule { }

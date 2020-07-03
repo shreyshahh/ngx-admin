@@ -4,7 +4,7 @@ import { LocalDataSource } from 'ng2-smart-table';
 @Component({
   selector: 'ngx-alive-coupon-code-main',
   templateUrl: './alive-coupon-code-main.component.html',
-  styleUrls: ['./alive-coupon-code-main.component.scss']
+  styleUrls: ['./alive-coupon-code-main.component.scss'],
 })
 export class AliveCouponCodeMainComponent implements OnInit {
 

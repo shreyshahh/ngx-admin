@@ -18,6 +18,6 @@ import { AliveCouponCodeMainComponent } from './alive-coupon-code-main.component
     ThemeModule,
     NbButtonModule,
 
-  ]
+  ],
 })
 export class AliveCouponCodeMainModule { }

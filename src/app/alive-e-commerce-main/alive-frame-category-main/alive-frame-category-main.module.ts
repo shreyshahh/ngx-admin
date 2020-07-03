@@ -17,6 +17,6 @@ import { ThemeModule } from '../../@theme/theme.module';
     NbInputModule,
     ThemeModule,
     NbButtonModule,
-  ]
+  ],
 })
 export class AliveFrameCategoryMainModule { }

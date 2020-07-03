@@ -4,7 +4,7 @@ import { LocalDataSource } from 'ng2-smart-table';
 @Component({
   selector: 'ngx-alive-glass-category-main',
   templateUrl: './alive-glass-category-main.component.html',
-  styleUrls: ['./alive-glass-category-main.component.scss']
+  styleUrls: ['./alive-glass-category-main.component.scss'],
 })
 export class AliveGlassCategoryMainComponent implements OnInit {
   ngOnInit(): void {
