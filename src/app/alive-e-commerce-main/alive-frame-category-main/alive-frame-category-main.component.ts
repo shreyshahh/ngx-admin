@@ -26,11 +26,6 @@ export class AliveFrameCategoryMainComponent implements OnInit {
       confirmDelete: true,
     },
     columns: {
-      id: {
-        title: 'Frame Category ID',
-        type: 'number',
-        editable: false,
-      },
       product: {
         title: 'Frame Category Name',
         type: 'string',
@@ -39,22 +34,47 @@ export class AliveFrameCategoryMainComponent implements OnInit {
   };
 
   source: LocalDataSource = new LocalDataSource();
+  material_source: LocalDataSource = new LocalDataSource();
+  shape_source: LocalDataSource = new LocalDataSource();
 
   constructor() {
 
     const data = [
       {
-        id: 1,
         product: 'Goggles',
-
       },
       {
-        id: 2,
         product: 'Number Waala',
-
       },
     ];
     this.source.load(data);
+
+    const material_data = [
+      {
+        product: 'Metal',
+      },
+      {
+        product: 'Plastic',
+      },
+      {
+        product: 'Rubber',
+      },
+    ];
+    this.material_source.load(material_data);
+
+    const shape_data = [
+      {
+        product: 'Aviators',
+      },
+      {
+        product: 'Round',
+      },
+      {
+        product: 'WayFarers',
+      },
+    ];
+    this.shape_source.load(shape_data);
+
   }
 
   onDeleteConfirm(event): void {
@@ -64,4 +84,70 @@ export class AliveFrameCategoryMainComponent implements OnInit {
       event.confirm.reject();
     }
   }
+
+  // material frames smart table
+
+  material_settings = {
+    add: {
+      addButtonContent: '<i class="nb-plus"></i>',
+      createButtonContent: '<i class="nb-checkmark"></i>',
+      cancelButtonContent: '<i class="nb-close"></i>',
+    },
+    edit: {
+      editButtonContent: '<i class="nb-edit"></i>',
+      saveButtonContent: '<i class="nb-checkmark"></i>',
+      cancelButtonContent: '<i class="nb-close"></i>',
+    },
+    delete: {
+      deleteButtonContent: '<i class="nb-trash"></i>',
+      confirmDelete: true,
+    },
+    columns: {
+      product: {
+        title: 'Frame Material Name',
+        type: 'string',
+      },
+    },
+  };
+
+  material_onDeleteConfirm(event): void {
+    if (window.confirm('Are you sure you want to delete?')) {
+      event.confirm.resolve();
+    } else {
+      event.confirm.reject();
+    }
+  }
+
+  // frame shape smart table data
+  shape_settings = {
+    add: {
+      addButtonContent: '<i class="nb-plus"></i>',
+      createButtonContent: '<i class="nb-checkmark"></i>',
+      cancelButtonContent: '<i class="nb-close"></i>',
+    },
+    edit: {
+      editButtonContent: '<i class="nb-edit"></i>',
+      saveButtonContent: '<i class="nb-checkmark"></i>',
+      cancelButtonContent: '<i class="nb-close"></i>',
+    },
+    delete: {
+      deleteButtonContent: '<i class="nb-trash"></i>',
+      confirmDelete: true,
+    },
+    columns: {
+      product: {
+        title: 'Frame Shape Category Name',
+        type: 'string',
+      },
+    },
+  };
+
+  shape_onDeleteConfirm(event): void {
+    if (window.confirm('Are you sure you want to delete?')) {
+      event.confirm.resolve();
+    } else {
+      event.confirm.reject();
+    }
+  }
+
 }

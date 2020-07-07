@@ -7,9 +7,6 @@ import { AliveProductOrdersMainComponent } from './alive-product-orders-main/ali
 // tslint:disable-next-line: max-line-length
 import { AliveDeliveredProductsMainComponent } from './alive-delivered-products-main/alive-delivered-products-main.component';
 import { AliveFrameCategoryMainComponent } from './alive-frame-category-main/alive-frame-category-main.component';
-// tslint:disable-next-line: max-line-length
-import { AliveFrameShapeCategoryMainComponent } from './alive-frame-shape-category-main/alive-frame-shape-category-main.component';
-import { AliveFrameMaterialMainComponent } from './alive-frame-material-main/alive-frame-material-main.component';
 import { AliveGlassCategoryMainComponent } from './alive-glass-category-main/alive-glass-category-main.component';
 import { AliveCouponCodeMainComponent } from './alive-coupon-code-main/alive-coupon-code-main.component';
 
@@ -32,14 +29,6 @@ const routes: Routes = [{
     {
       path: 'alive-frame-category-main',
       component: AliveFrameCategoryMainComponent,
-    },
-    {
-      path: 'alive-frame-shape-category-main',
-      component: AliveFrameShapeCategoryMainComponent,
-    },
-    {
-      path: 'alive-frame-material-main',
-      component: AliveFrameMaterialMainComponent,
     },
     {
       path: 'alive-glass-category-main',
