@@ -9,6 +9,8 @@ import { AliveDeliveredProductsMainComponent } from './alive-delivered-products-
 import { AliveFrameCategoryMainComponent } from './alive-frame-category-main/alive-frame-category-main.component';
 import { AliveGlassCategoryMainComponent } from './alive-glass-category-main/alive-glass-category-main.component';
 import { AliveCouponCodeMainComponent } from './alive-coupon-code-main/alive-coupon-code-main.component';
+import { AliveFrameLensMaterialMainComponent } from './alive-frame-lens-material-main/alive-frame-lens-material-main.component';
+import { AliveFrameLensBrandNameMainComponent } from './alive-frame-lens-brand-name-main/alive-frame-lens-brand-name-main.component';
 
 const routes: Routes = [{
   path: '',
@@ -35,8 +37,16 @@ const routes: Routes = [{
       component: AliveGlassCategoryMainComponent,
     },
     {
+      path: 'alive-material-category-main',
+      component: AliveFrameLensMaterialMainComponent,
+    },
+    {
       path: 'alive-coupon-code-main',
       component: AliveCouponCodeMainComponent,
+    },
+    {
+      path: 'alive-frame-lens-brand-name-main',
+      component: AliveFrameLensBrandNameMainComponent,
     },
     {
       path: '',

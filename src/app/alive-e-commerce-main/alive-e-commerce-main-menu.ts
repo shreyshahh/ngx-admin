@@ -54,6 +54,16 @@ export const MENU_ITEMS: NbMenuItem[] = [
         icon: 'recording',
         link: '/alive-e-commerce-main/alive-glass-category-main',
       },
+      {
+        title: 'Material Categories',
+        icon: 'recording',
+        link: '/alive-e-commerce-main/alive-material-category-main',
+      },
+      {
+        title: 'Brand Categories',
+        icon: 'recording',
+        link: '/alive-e-commerce-main/alive-frame-lens-brand-name-main',
+      },
     ],
   },
   {
